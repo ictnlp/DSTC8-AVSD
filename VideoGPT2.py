@@ -59,9 +59,11 @@ class Attention(nn.Module):
 
         if attention_mask is not None:
             # Apply the attention mask
-            b = torch.gt(b + attention_mask[1], 0).float()
+            b = torch.gt(b + attention_mask[0], 0).float()
             w = w * b - 1e18 * (1 - b)
-            w = w - 1e18 * (1 - attention_mask[0])
+            w = w - 1e18 * (1 - attention_mask[1])
+        else:
+            w = w * b - 1e18 * (1 - b)
 
         w = nn.Softmax(dim=-1)(w)
         w = self.attn_dropout(w)
