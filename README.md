@@ -1,6 +1,9 @@
 # DSTC8-AVSD
 We rank the 1st in DSTC8 Audio-Visual Scene-Aware Dialog competition. This is the source code for our AAAI2020-DSTC8-AVSD paper [Bridging Text and Video: A Universal Multimodal Transformer for Video-Audio Scene-Aware Dialog.](<https://arxiv.org/abs/2002.00163>) Zekang Li, Zongjia Li, Jinchao Zhang, Yang Feng, Cheng Niu, Jie Zhou. AAAI2020.
 
+## News
+Our paper is accpeted by IEEE/ACM Transactions on Audio, Speech, and Language Processing (TASLP). [url](<https://ieeexplore.ieee.org/abstract/document/9376902>)
+
 ## Abstract
 
 Audio-Visual Scene-Aware Dialog (AVSD) is a task to generate responses when chatting about a given video, which is organized as a track of the 8th Dialog System Technology Challenge (DSTC8). To solve the task, we propose a universal multimodal transformer and introduce the multi-task learning method to learn joint representations among different modalities as well as generate informative and fluent responses. Our method extends the natural language generation pre-trained model to multimodal dialogue generation
