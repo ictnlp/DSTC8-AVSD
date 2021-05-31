@@ -99,7 +99,7 @@ def beam_search(caption, history, tokenizer, model, args, current_output=None, v
         new_hyplist = []
         argmin = 0
         for out, lp, st in hyplist:
-            instance, sequence = build_input_from_segments(caption, history, st, tokenizer, with_eos=False, drop_caption=True)
+            instance, sequence = build_input_from_segments(caption, history, st, tokenizer, with_eos=False, drop_caption=False)
 
             input_ids = torch.tensor(instance["input_ids"], device=args.device).unsqueeze(0)
             token_type_ids = torch.tensor(instance["token_type_ids"], device=args.device).unsqueeze(0)
